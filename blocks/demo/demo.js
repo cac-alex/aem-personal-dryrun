@@ -1,7 +1,6 @@
 export default function decorate(block) {
-    const text = block.innerHTML;
-    const newElement = document.createElement('marquee');
-    newElement.innerHTML = text;
+    const marquee = document.createElement('marquee');
+    marquee.textContent = block.textContent;
     block.innerHTML = '';
-    block.appendChild(newElement);
+    block.appendChild(marquee);
 }
